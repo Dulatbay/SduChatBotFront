@@ -8,8 +8,12 @@ const SidebarHeader: React.FC<SidebarHeaderProps> = ({ onCollapse }) => {
     return (
         <div className="flex items-center justify-between ml-4">
             <div className="flex items-center space-x-3">
-                <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
-                    <span className="text-white font-bold text-lg">S</span>
+                <div className="w-8 h-8 rounded-lg flex items-center justify-center overflow-hidden">
+                    <img 
+                        src="https://sdu-bot-web-app-elements-bucket.s3.us-east-1.amazonaws.com/sdu_logo.jpg"
+                        alt="SDU Logo"
+                        className="w-full h-full object-cover"
+                    />
                 </div>
                 <div>
                     <h1 className="text-lg font-semibold text-gray-900">SDU Chat</h1>

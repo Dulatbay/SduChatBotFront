@@ -1,5 +1,6 @@
 import React from 'react';
 import type { Message } from "@/services/chat/types.ts";
+import TextFormatter from './TextFormatter';
 
 const formatDate = (dateString: string) => {
     const date = new Date(dateString);
@@ -41,7 +42,11 @@ export const MessageBubble: React.FC<MessageBubbleProps> = ({message}) => {
                         ? 'bg-blue-500 text-white rounded-tr-none'
                         : 'bg-gray-100 text-gray-800 rounded-tl-none'
                 }`}>
-                    <p className="whitespace-pre-wrap break-words">{message.content}</p>
+                    {isUser ? (
+                        <p className="whitespace-pre-wrap break-words">{message.content}</p>
+                    ) : (
+                        <TextFormatter text={message.content} className="leading-relaxed" />
+                    )}
                 </div>
 
                 {message.sources && message.sources.length > 0 && (

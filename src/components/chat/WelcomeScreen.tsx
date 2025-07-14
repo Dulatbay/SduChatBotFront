@@ -38,10 +38,31 @@ export const WelcomeScreen: React.FC<WelcomeScreenProps> = ({
         );
     }
 
+    const backgroundImage = "https://sdu-bot-web-app-elements-bucket.s3.us-east-1.amazonaws.com/logo-1024x1016.png";
+
     return (
         <div className="w-full max-w-3xl mx-auto flex flex-col h-full">
-            <div className="flex-1 flex flex-col items-center justify-center">
-                <div className="text-center mb-8">
+            <div className="flex-1 flex flex-col items-center justify-center relative">
+                <div 
+                    style={{
+                        position: 'absolute',
+                        top: 0,
+                        left: 0,
+                        right: 0,
+                        bottom: 0,
+                        backgroundImage: `url(${backgroundImage})`,
+                        backgroundSize: 'min(250px, 40vw) min(250px, 40vw)',
+                        backgroundPosition: `center calc(50% - ${0 * 0}px)`,
+                        backgroundRepeat: 'no-repeat',
+                        opacity: 0.20,
+                        pointerEvents: 'none',
+                        zIndex: 1,
+                        willChange: 'background-position',
+                        transition: 'background-position 0.1s ease-out'
+                    }}
+                    className="sm:opacity-10"
+                />
+                <div className="text-center mb-8 relative z-10">
                     <h2 className="text-2xl font-semibold text-gray-800 mb-2">
                         SDU Knowledge Base
                     </h2>
