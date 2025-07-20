@@ -62,14 +62,6 @@ export const WelcomeScreen: React.FC<WelcomeScreenProps> = ({
                     }}
                     className="sm:opacity-10"
                 />
-                <div className="text-center mb-8 relative z-10">
-                    <h2 className="text-2xl font-semibold text-gray-800 mb-2">
-                        SDU Knowledge Base
-                    </h2>
-                    <p className="text-gray-600">
-                        SDU University Q&A Assistant
-                    </p>
-                </div>
             </div>
             <div className="p-4 mt-auto">
                 <MessageInput
