@@ -67,7 +67,7 @@ export const WelcomeScreen: React.FC<WelcomeScreenProps> = ({
                         SDU Knowledge Base
                     </h2>
                     <p className="text-gray-600">
-                        Suleyman Demirel University Q&A Assistant
+                        SDU University Q&A Assistant
                     </p>
                 </div>
             </div>

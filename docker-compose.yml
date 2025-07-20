@@ -10,4 +10,14 @@ services:
       - /app/node_modules
     environment:
       - NODE_ENV=development
+      - VITE_API_URL=http://3.79.94.254:8080/api
+    restart: unless-stopped 
+  sdu-chat-front-prod:
+    build:
+      context: .
+      dockerfile: Dockerfile.prod
+      args:
+        VITE_API_URL: "http://3.79.94.254:8080/api"
+    ports:
+      - "80:80"
     restart: unless-stopped 
