@@ -248,7 +248,7 @@ const ChatComponent: React.FC = () => {
                             isFetching={isFetchingRef.current}
                         />
                     </div>
-                    <div className="p-4 w-[800px] mx-auto bg-transparent mt-auto">
+                    <div className="p-2 sm:p-4 w-full max-w-3xl mx-auto bg-transparent mt-auto">
                         <MessageInput
                             message={message}
                             setMessage={setMessage}

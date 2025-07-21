@@ -15,11 +15,11 @@ export const MessageInput: React.FC<MessageInputProps> = ({
     handleSubmit,
     isSending,
     placeholder = "Введите сообщение...",
-    className = "w-[800px]"
+    className = "max-w-[600px]"
 }) => {
     return (
         <form onSubmit={handleSubmit} className={className}>
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-2">
                 <input
                     type="text"
                     value={message}
