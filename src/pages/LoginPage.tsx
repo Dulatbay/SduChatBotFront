@@ -8,9 +8,9 @@ const RESPONSE_TYPE = 'code';
 const CLIENT_ID = '211043075627-go3joan2ll0scbt3e43qm2tlcpk3jpdd.apps.googleusercontent.com';
 const SCOPE = 'https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile openid';
 const ACCESS_TYPE = 'offline';
-// const REDIRECT_URI = 'http://localhost:5173/login-callback';
+const REDIRECT_URI = 'http://localhost:5173/login-callback';
 // const REDIRECT_URI = 'http://localhost/login-callback';
-const REDIRECT_URI = 'http://chat.sdu.edu.kz/login-callback';
+// const REDIRECT_URI = 'http://chat.sdu.edu.kz/login-callback';
 
 
 const LoginPage: FC = () => {
