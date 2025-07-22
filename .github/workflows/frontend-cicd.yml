@@ -24,6 +24,6 @@ jobs:
           key: ${{ secrets.SERVER_SSH_KEY }}
           script: |
             cd /home/ubuntu/SduChatBotFront
-            git pull origin damir
+            git pull --no-rebase origin damir
             docker compose build sdu-chat-front-prod
             docker compose up -d sdu-chat-front-prod
