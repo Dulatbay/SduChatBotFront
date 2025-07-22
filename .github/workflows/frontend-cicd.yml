@@ -25,5 +25,5 @@ jobs:
           script: |
             cd /home/ubuntu/SduChatBotFront
             git pull origin damir
-            docker compose down
-            docker compose up -d --build
+            docker compose build sdu-chat-front-prod
+            docker compose up -d sdu-chat-front-prod
