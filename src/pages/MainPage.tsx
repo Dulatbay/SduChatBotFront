@@ -20,7 +20,7 @@ const MainPage: FC = () => {
         <div className="flex h-[100dvh] bg-gray-100">
             {/* Sidebar for larger screens */}
             <div className="hidden lg:block w-80">
-                <ChatSidebar onCollapse={() => {}} />
+                <ChatSidebar onCollapse={() => setIsSidebarOpen(false)} />
             </div>
 
             {/* Sidebar for mobile (drawer) */}
