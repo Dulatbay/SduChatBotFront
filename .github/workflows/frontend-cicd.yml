@@ -24,6 +24,8 @@ jobs:
           key: ${{ secrets.SERVER_SSH_KEY }}
           script: |
             cd /home/ubuntu/SduChatBotFront
-            git pull origin damir
+            git fetch origin damir
+            git reset --hard origin/damir
+            git clean -fd
             docker compose build sdu-chat-front-prod
             docker compose up -d sdu-chat-front-prod
