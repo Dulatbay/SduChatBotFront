@@ -38,7 +38,7 @@ export const WelcomeScreen: React.FC<WelcomeScreenProps> = ({
         );
     }
 
-    const backgroundImage = "https://sdu-bot-web-app-elements-bucket.s3.us-east-1.amazonaws.com/logo-1024x1016.png";
+    const backgroundImage = "https://sdu-chatbot-front-elements.s3.eu-central-1.amazonaws.com/logo-1024x1016.png";
 
     return (
         <div className="w-full max-w-3xl mx-auto flex flex-col h-full">
