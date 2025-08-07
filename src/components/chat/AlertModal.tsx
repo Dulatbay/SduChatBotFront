@@ -3,9 +3,10 @@ import React from "react";
 interface AlertModalProps {
     link: string;
     text: string;
+    className?: string;
 }
 
-export const AlertModal = ({ link, text }: AlertModalProps) => {
+export const AlertModal = ({ link, text, className }: AlertModalProps) => {
     const [isOpen, setIsOpen] = React.useState(false);
     const [isVisible, setIsVisible] = React.useState(false);
 
@@ -25,7 +26,7 @@ export const AlertModal = ({ link, text }: AlertModalProps) => {
             <a
                 href={link}
                 onClick={openModal}
-                className="text-blue-500 hover:text-blue-600 transition-colors duration-200 cursor-pointer hover:underline"
+                className={className + "cursor-pointer"}
             >
                 {text}
             </a>

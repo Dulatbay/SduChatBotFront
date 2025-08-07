@@ -114,6 +114,7 @@ class TextFormatterParsers {
         //   {url}
         // </a>
           <AlertModal
+              className={"text-blue-500 hover:text-blue-600 transition-colors duration-200 hover:underline"}
               key={key}
               link={href}
               text={url}
