@@ -12,6 +12,7 @@ interface ChatItemProps {
         id: number;
         title: string;
     };
+    onCollapse?: () => void;
     isActive: boolean;
     onNavigate: (chatId: number) => void;
     onDelete: (chatId: number, e: React.MouseEvent) => void;
@@ -49,7 +50,7 @@ const ChatDropdown = ({ chatId, onDelete, onClose }: { chatId: number; onDelete:
     );
 };
 
-const ChatItem = ({ chat, isActive, onNavigate, onDelete }: ChatItemProps) => {
+const ChatItem = ({ chat, isActive, onNavigate, onDelete, onCollapse }: ChatItemProps) => {
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
     return (
@@ -60,6 +61,9 @@ const ChatItem = ({ chat, isActive, onNavigate, onDelete }: ChatItemProps) => {
             onClick={() => {
                 if (isActive) return;
                 onNavigate(chat.id);
+                if (onCollapse) {
+                    onCollapse();
+                }
             }}
         >
             <div className="flex justify-between items-start">
@@ -110,7 +114,11 @@ const useInfiniteScroll = (hasMore: boolean, onLoadMore: () => void) => {
     return { loader, isFetchingRef };
 };
 
-const ChatList = () => {
+interface ChatListSidebarProps {
+    onCollapse?: () => void;
+}
+
+const ChatList = ({onCollapse}:ChatListSidebarProps) => {
     const dispatch = useDispatch();
     const chats = useSelector((state: RootState) => state.chat.chats);
     const [page, setPage] = useState(0);
@@ -171,6 +179,7 @@ const ChatList = () => {
                 <ChatItem
                     key={chat.id}
                     chat={chat}
+                    onCollapse={onCollapse}
                     isActive={(chatId && +chatId) === chat.id}
                     onNavigate={(id) => navigate(`/${id}`)}
                     onDelete={handleDeleteChat}
