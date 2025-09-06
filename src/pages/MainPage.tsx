@@ -17,15 +17,15 @@ const MainPage: FC = () => {
     }
 
     return (
-        <div className="flex h-screen bg-gray-100">
+        <div className="flex h-[100dvh] bg-gray-100">
             {/* Sidebar for larger screens */}
             <div className="hidden lg:block w-80">
-                <ChatSidebar onCollapse={() => {}} />
+                <ChatSidebar onCollapse={() => setIsSidebarOpen(false)} />
             </div>
 
             {/* Sidebar for mobile (drawer) */}
             <div
-                className={`fixed inset-y-0 left-0 z-30 w-80 bg-white transition-transform duration-300 ease-in-out transform ${
+                className={`absolute inset-y-0 left-0 z-30 w-80 bg-white transition-transform duration-300 ease-in-out transform ${
                     isSidebarOpen ? 'translate-x-0' : '-translate-x-full'
                 } lg:hidden`}
             >

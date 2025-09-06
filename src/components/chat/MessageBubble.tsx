@@ -1,6 +1,7 @@
 import React from 'react';
 import type { Message } from "@/services/chat/types.ts";
 import TextFormatter from './TextFormatter';
+import {AlertModal} from "@/components/chat/AlertModal.tsx";
 
 const formatDate = (dateString: string) => {
     const date = new Date(dateString);
@@ -54,7 +55,7 @@ export const MessageBubble: React.FC<MessageBubbleProps> = ({message}) => {
                         <div className="flex flex-wrap gap-1">
                             {message.sources.map((source, index) => (
                                 <span key={index} className="bg-gray-100 px-2 py-1 rounded-full">
-                                    {source}
+                                    <AlertModal link={source} text={source} />
                                 </span>
                             ))}
                         </div>
