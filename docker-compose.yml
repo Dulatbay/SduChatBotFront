@@ -1,23 +1,17 @@
 services:
   sdu-chat-front:
-    build:
-      context: .
-      dockerfile: Dockerfile
+    image: batyrbaev0520/sdu-chat-bot-front:local-1.0.0
     ports:
       - "5173:5173"
-    volumes:
-      - .:/app
-      - /app/node_modules
     environment:
       - NODE_ENV=development
       - VITE_API_URL=${VITE_API_URL}
     restart: unless-stopped 
+
   sdu-chat-front-prod:
-    build:
-      context: .
-      dockerfile: Dockerfile.prod
-      args:
-        VITE_API_URL: ${VITE_API_URL}
+    image: batyrbaev0520/sdu-chat-bot-front:prod-1.0.0
+    environment:
+      - VITE_API_URL=${VITE_API_URL}
     ports:
       - "80:80"
     restart: unless-stopped 
