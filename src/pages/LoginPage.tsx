@@ -11,7 +11,7 @@ const ACCESS_TYPE = 'offline';
 // const REDIRECT_URI = 'http://localhost:5173/login-callback';
 // const REDIRECT_URI = 'http://localhost/login-callback';
 const REDIRECT_URI = 'http://chat.sdu.edu.kz/login-callback';
-
+// const REDIRECT_URI = 'https://dev.dsfyww8pm8b26.amplifyapp.com/login-callback';
 
 const LoginPage: FC = () => {
     // const navigate = useNavigate();
@@ -24,11 +24,11 @@ const LoginPage: FC = () => {
     // }, [isAuthenticated, navigate]);
 
     return (
-        <div className="min-h-screen flex items-center justify-center bg-gray-50">
+        <div className="h-[100dvh] flex items-center justify-center bg-gray-50">
             <div className="max-w-md w-full space-y-8 p-8 bg-white rounded-lg shadow-lg">
                 <div>
                     <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
-                        Welcome Back
+                        Welcome back
                     </h2>
                 </div>
                 <a
