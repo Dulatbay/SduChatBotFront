@@ -1,6 +1,6 @@
 services:
   sdu-chat-front:
-    image: batyrbaev0520/sdu-chat-front:prod-1.0.0
+    image: batyrbaev0520/sdu-chat-front:prod-1.0.1
     ports:
       - "5173:5173"
     environment:
