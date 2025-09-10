@@ -1,12 +1,19 @@
 import { useNavigate } from "react-router";
+import type {FC} from "react";
 
-function CreateNewChat() {
+
+interface CreateNewChatProps {
+    onCollapse: () => void;
+}
+
+const CreateNewChat:FC<CreateNewChatProps> = ({onCollapse}) => {
     const navigate = useNavigate()
     return (
         <div className="">
             <button
                 onClick={() => {
-                    navigate("/")
+                    navigate("/");
+                    onCollapse();
                 }}
                 className="w-full flex items-center justify-start px-4 py-2 text-black rounded-lg hover:bg-gray-200 transition-colors cursor-pointer"
             >

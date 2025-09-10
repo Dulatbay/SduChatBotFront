@@ -1,4 +1,5 @@
 import React from 'react';
+import {AlertModal} from "@/components/chat/AlertModal.tsx";
 
 // SOLID Principle: Single Responsibility - Each formatter handles one type of content
 class TextFormatterParsers {
@@ -103,15 +104,21 @@ class TextFormatterParsers {
     return {
       beforeMatch: text.substring(0, match.index!),
       element: (
-        <a 
-          key={key} 
-          href={href}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-blue-600 hover:text-blue-800 underline break-all"
-        >
-          {url}
-        </a>
+        // <a
+        //   key={key}
+        //   href={href}
+        //   target="_blank"
+        //   rel="noopener noreferrer"
+        //   className="text-blue-600 hover:text-blue-800 underline break-all"
+        // >
+        //   {url}
+        // </a>
+          <AlertModal
+              className={"text-blue-500 hover:text-blue-600 transition-colors duration-200 hover:underline"}
+              key={key}
+              link={href}
+              text={url}
+          />
       ),
       afterMatch: text.substring(match.index! + match[0].length),
       matchLength: match[0].length

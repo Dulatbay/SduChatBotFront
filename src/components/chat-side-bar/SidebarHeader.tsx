@@ -10,7 +10,7 @@ const SidebarHeader: React.FC<SidebarHeaderProps> = ({ onCollapse }) => {
             <div className="flex items-center space-x-3">
                 <div className="w-8 h-8 rounded-lg flex items-center justify-center overflow-hidden">
                     <img 
-                        src="https://sdu-bot-web-app-elements-bucket.s3.us-east-1.amazonaws.com/sdu_logo.jpg"
+                        src="https://sdu-chatbot-front-elements.s3.eu-central-1.amazonaws.com/sdu_logo+(1).jpg"
                         alt="SDU Logo"
                         className="w-full h-full object-cover"
                     />
